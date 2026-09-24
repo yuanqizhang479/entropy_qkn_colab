@@ -1,0 +1,52 @@
+{
+  "model": {
+    "vocab_size": 50257,
+    "max_seq_len": 256,
+    "d_model": 256,
+    "n_heads": 4,
+    "n_layers": 6,
+    "mlp_ratio": 4,
+    "norm_eps": 1e-05
+  },
+  "train": {
+    "steps": 2500,
+    "batch_size": 4,
+    "grad_accum": 4,
+    "learning_rate": 0.0001,
+    "weight_decay": 0.1,
+    "beta1": 0.9,
+    "beta2": 0.95,
+    "adam_eps": 1e-08,
+    "clip_grad_norm": 1.0,
+    "warmup_steps": 100,
+    "min_lr_ratio": 0.1,
+    "eval_interval": 250,
+    "eval_batches": 32,
+    "checkpoint_steps": [
+      0,
+      250,
+      1000,
+      2500
+    ],
+    "checkpoint_interval": 250,
+    "precision": "auto",
+    "device": "auto",
+    "deterministic": true
+  },
+  "study": {
+    "phase": "robustness",
+    "synthetic_allowed": false,
+    "primary_endpoint": "endpoint_kl_mean at alpha=1, standard trajectory final checkpoint",
+    "primary_comparison": "q_detach vs standard",
+    "seeds": [
+      101,
+      202,
+      303,
+      404,
+      505,
+      606
+    ],
+    "measurement_seq_len": 128,
+    "measurement_batch_size": 1
+  }
+}

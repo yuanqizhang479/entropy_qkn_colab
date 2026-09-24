@@ -1,0 +1,108 @@
+{
+  "schema_version": 1,
+  "dataset": "wikitext103",
+  "synthetic": false,
+  "dtype": "<u2",
+  "splits": {
+    "validation": {
+      "file": "validation.bin",
+      "tokens": 1024,
+      "bytes": 2048,
+      "sha256": "c213d8e1706a7c95fd4d6b04678787072fc0dac478a39d7fa1960683ab57904b",
+      "documents_file": "validation.documents.jsonl",
+      "documents_sha256": "7243dc700fac7283c1c67c570fb6acdf27a6cac15f94d89d1507ec342507afbc",
+      "source_documents": 60,
+      "encoded_documents": 1,
+      "within_split_exact_duplicates": 0,
+      "cross_split_exact_duplicates": [],
+      "max_tokens": 1024,
+      "excluded_heldout_exact_duplicates": []
+    },
+    "test": {
+      "file": "test.bin",
+      "tokens": 1024,
+      "bytes": 2048,
+      "sha256": "8e8cbfa8fbbfca6739b294b855ff14a3fae7b52ae16fd92e72f26c6cb236a34d",
+      "documents_file": "test.documents.jsonl",
+      "documents_sha256": "0a30ea5656c14132208eb49e43caf7c9581f72da652a0c5865537b5019a6d1e1",
+      "source_documents": 60,
+      "encoded_documents": 1,
+      "within_split_exact_duplicates": 0,
+      "cross_split_exact_duplicates": [],
+      "max_tokens": 1024,
+      "excluded_heldout_exact_duplicates": []
+    },
+    "train": {
+      "file": "train.bin",
+      "tokens": 4096,
+      "bytes": 8192,
+      "sha256": "f17a8633cb2b11b0cf1502a6e34c1b86544eeebb394df9ac94889c29987f0aba",
+      "documents_file": "train.documents.jsonl",
+      "documents_sha256": "ff33b52954ae076de8d044f06531c18e965564324c82b13fe6732779d3b8eeb1",
+      "source_documents": 28472,
+      "encoded_documents": 1,
+      "within_split_exact_duplicates": 240,
+      "cross_split_exact_duplicates": [],
+      "max_tokens": 4096,
+      "excluded_heldout_exact_duplicates": [
+        {
+          "source_id": "3821",
+          "sha256": "79e23ba5454fce579d81088db666e12869463168a985ace6895aa1974b4c77fd",
+          "characters": 17868
+        }
+      ]
+    }
+  },
+  "versions": {
+    "python": "3.12.14",
+    "numpy": "2.3.5",
+    "tiktoken": "0.9.0",
+    "pyarrow": "25.0.1"
+  },
+  "split_policy": "official validation/test unchanged; remove full-article exact heldout duplicates from official train before prefix selection",
+  "token_budget_policy": "deterministic source-order prefix; never shuffle before selection",
+  "text_policy": "source text preserved; GPT-2 EOS between full articles/books; final prefix may truncate a document",
+  "exact_overlap_audit": "full document SHA256 of UTF-8 text.strip(); near-duplicate/semantic overlap not tested",
+  "sources": [
+    {
+      "url": "https://huggingface.co/datasets/Salesforce/wikitext/resolve/b08601e04326c79dfdd32d625aee71d232d685c3/wikitext-103-raw-v1/validation-00000-of-00001.parquet",
+      "sha256": "204929b7ff9d6184953f867dedb860e40aa69c078fc1e54b3baaa8fb28511c4c",
+      "bytes": 657209
+    },
+    {
+      "url": "https://huggingface.co/datasets/Salesforce/wikitext/resolve/b08601e04326c79dfdd32d625aee71d232d685c3/wikitext-103-raw-v1/test-00000-of-00001.parquet",
+      "sha256": "5f1bea067869d04849c0f975a2b29c4ff47d867f484f5010ea5e861eab246d91",
+      "bytes": 732610
+    },
+    {
+      "url": "https://huggingface.co/datasets/Salesforce/wikitext/resolve/b08601e04326c79dfdd32d625aee71d232d685c3/wikitext-103-raw-v1/train-00000-of-00002.parquet",
+      "sha256": "74da360f23826045b3e6ac6375411fdb15f003030aa74f2596ed08b857cb9212",
+      "bytes": 156987808
+    },
+    {
+      "url": "https://huggingface.co/datasets/Salesforce/wikitext/resolve/b08601e04326c79dfdd32d625aee71d232d685c3/wikitext-103-raw-v1/train-00001-of-00002.parquet",
+      "sha256": "ba090ac30dbf5461e8dcbdd1a1b8e6f3cf9c2c756d64f0c1220450acd514f720",
+      "bytes": 157088770
+    }
+  ],
+  "vocab_size": 50257,
+  "eos_token": 50256,
+  "tokenizer": {
+    "name": "gpt2",
+    "implementation": "tiktoken",
+    "assets_sha256": {
+      "https://openaipublic.blob.core.windows.net/gpt-2/encodings/main/vocab.bpe": "1ce1664773c50f3e0cc8842619a93edc4624525b728b188a9e0be33b7726adc5",
+      "https://openaipublic.blob.core.windows.net/gpt-2/encodings/main/encoder.json": "196139668be63f3b5d6574427317ae82f612a97c5d1cdaf36ed2256dbf636783"
+    }
+  },
+  "paper_eligible": true,
+  "dataset_repo": "Salesforce/wikitext",
+  "revision": "b08601e04326c79dfdd32d625aee71d232d685c3",
+  "config": "wikitext-103-raw-v1",
+  "license": "CC BY-SA 3.0 / GFDL (source card)",
+  "benchmark_variant": "WikiText-103 raw, GPT-2 BPE, training exact-deduplicated against canonical heldouts",
+  "exact_cross_split_document_duplicates": 0,
+  "source_training_articles_excluded_as_exact_heldout_duplicates": 1,
+  "full_source_train_heldout_exact_duplicate_articles": 1,
+  "after_filter_cross_split_exact_document_duplicates": 0
+}

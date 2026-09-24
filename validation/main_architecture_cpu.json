@@ -1,0 +1,13 @@
+{
+  "train_nll": 10.813765525817871,
+  "grad_norm": 12.558133125305176,
+  "clip_applied": true,
+  "clip_coefficient": 0.07962966393112153,
+  "tokens": 16,
+  "loss_scale": 1.0,
+  "amp_overflow_retries": 0,
+  "n_parameters": 17653248,
+  "purpose": "CPU main architecture one microbatch correctness only; not training or GPU performance result",
+  "seq_len": 16,
+  "batch_size": 1
+}

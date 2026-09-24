@@ -1,0 +1,21 @@
+{
+  "notebook_json_valid": true,
+  "all_python_cells_compile": true,
+  "code_cell_count": 12,
+  "cell_count": 21,
+  "zip_route_mocked_local_first_and_resume": "pass",
+  "zip_upload_calls_across_two_starts": 1,
+  "zip_restart_does_not_overwrite_local_changes": true,
+  "confirmation_plan_commands": {
+    "training": 12,
+    "diagnostics": 24
+  },
+  "confirmation_freeze_and_mismatch_rejection": "pass",
+  "not_executed_here": [
+    "Actual Google Colab notebook session",
+    "CUDA/GPU experiments",
+    "GitHub network clone from user repository"
+  ],
+  "note": "Source upload route exercised with mocked google.colab and a tiny local ZIP, not an actual Colab account.",
+  "final_all_code_cells_ast_valid": true
+}

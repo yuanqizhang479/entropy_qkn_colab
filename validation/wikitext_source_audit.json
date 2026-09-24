@@ -1,0 +1,72 @@
+{
+  "validation_date": "2026-09-24",
+  "purpose": "Real source download and preprocessing smoke only; not GPU or paper performance evidence",
+  "dataset": "Salesforce/wikitext",
+  "revision": "b08601e04326c79dfdd32d625aee71d232d685c3",
+  "manifest_sha256": "541ed78a3bc3074055cb29da9bc515176ceee6fb9a2aedb1ee116ead497f69f8",
+  "official_source_files": [
+    {
+      "url": "https://huggingface.co/datasets/Salesforce/wikitext/resolve/b08601e04326c79dfdd32d625aee71d232d685c3/wikitext-103-raw-v1/validation-00000-of-00001.parquet",
+      "sha256": "204929b7ff9d6184953f867dedb860e40aa69c078fc1e54b3baaa8fb28511c4c",
+      "bytes": 657209
+    },
+    {
+      "url": "https://huggingface.co/datasets/Salesforce/wikitext/resolve/b08601e04326c79dfdd32d625aee71d232d685c3/wikitext-103-raw-v1/test-00000-of-00001.parquet",
+      "sha256": "5f1bea067869d04849c0f975a2b29c4ff47d867f484f5010ea5e861eab246d91",
+      "bytes": 732610
+    },
+    {
+      "url": "https://huggingface.co/datasets/Salesforce/wikitext/resolve/b08601e04326c79dfdd32d625aee71d232d685c3/wikitext-103-raw-v1/train-00000-of-00002.parquet",
+      "sha256": "74da360f23826045b3e6ac6375411fdb15f003030aa74f2596ed08b857cb9212",
+      "bytes": 156987808
+    },
+    {
+      "url": "https://huggingface.co/datasets/Salesforce/wikitext/resolve/b08601e04326c79dfdd32d625aee71d232d685c3/wikitext-103-raw-v1/train-00001-of-00002.parquet",
+      "sha256": "ba090ac30dbf5461e8dcbdd1a1b8e6f3cf9c2c756d64f0c1220450acd514f720",
+      "bytes": 157088770
+    }
+  ],
+  "full_source_reconstructed_document_unit_counts": {
+    "validation": 60,
+    "test": 60,
+    "train": 28472
+  },
+  "original_2016_paper_article_counts": {
+    "train": 28475,
+    "validation": 60,
+    "test": 60
+  },
+  "reconstruction_rule": "single-equals heading with blank rows before and after; math continuation regression tested; reconstructed units are not original crawler article IDs",
+  "source_duplicate_articles": 1,
+  "excluded_training_articles": [
+    {
+      "source_id": "3821",
+      "sha256": "79e23ba5454fce579d81088db666e12869463168a985ace6895aa1974b4c77fd",
+      "characters": 17868
+    }
+  ],
+  "duplicate_test_document_unit_index": 59,
+  "duplicate_title": "The Hustler (film)",
+  "after_filter_cross_split_exact_document_duplicates": 0,
+  "smoke_token_counts": {
+    "validation": 1024,
+    "test": 1024,
+    "train": 4096
+  },
+  "token_bin_sha256": {
+    "validation": "c213d8e1706a7c95fd4d6b04678787072fc0dac478a39d7fa1960683ab57904b",
+    "test": "8e8cbfa8fbbfca6739b294b855ff14a3fae7b52ae16fd92e72f26c6cb236a34d",
+    "train": "f17a8633cb2b11b0cf1502a6e34c1b86544eeebb394df9ac94889c29987f0aba"
+  },
+  "versions": {
+    "python": "3.12.14",
+    "numpy": "2.3.5",
+    "tiktoken": "0.9.0",
+    "pyarrow": "25.0.1"
+  },
+  "limitations": [
+    "Exact reconstructed-document hashing does not exclude partial, near-duplicate, or semantic overlaps.",
+    "28472 reconstructed training units differs from original paper article count28475; this is documented, not silently forced.",
+    "Small token prefixes are validation fixtures, not scientific results."
+  ]
+}

@@ -1,0 +1,95 @@
+{
+  "purpose": "Engineering validation only: small CPU model and tiny real-data prefixes; NOT pilot research results",
+  "date": "2026-09-24",
+  "cpu_pytest_passed": 38,
+  "cuda_tests_skipped": 3,
+  "cuda_skip_reason": "No CUDA GPU in execution environment",
+  "cpu_training_cohort": {
+    "seeds": [
+      11,
+      22
+    ],
+    "arms": [
+      "standard",
+      "q_detach"
+    ],
+    "optimizer_steps_per_run": 4,
+    "d_model": 32,
+    "layers": 2,
+    "vocab": 50257,
+    "context": 16,
+    "data_manifest_sha256": "541ed78a3bc3074055cb29da9bc515176ceee6fb9a2aedb1ee116ead497f69f8"
+  },
+  "source_fingerprint_at_pipeline": "48c0deb47a88d0e9bbc49ebab6943b062ae08c60b17b62b1a774f3f5cbf4c474",
+  "replays": [
+    {
+      "seed": 11,
+      "step": 0,
+      "parameter_max_abs_difference": 0.0,
+      "parameter_l2_difference": 0.0,
+      "training_batch_identical": true,
+      "bitwise_parameter_update_identical": true,
+      "attention_logit_max_abs_difference": 0.0,
+      "endpoint_kl_mean": 0.0
+    },
+    {
+      "seed": 11,
+      "step": 2,
+      "parameter_max_abs_difference": 0.0,
+      "parameter_l2_difference": 0.0,
+      "training_batch_identical": true,
+      "bitwise_parameter_update_identical": true,
+      "attention_logit_max_abs_difference": 0.0,
+      "endpoint_kl_mean": 0.0
+    },
+    {
+      "seed": 11,
+      "step": 4,
+      "parameter_max_abs_difference": 0.0,
+      "parameter_l2_difference": 0.0,
+      "training_batch_identical": true,
+      "bitwise_parameter_update_identical": true,
+      "attention_logit_max_abs_difference": 0.0,
+      "endpoint_kl_mean": 0.0
+    },
+    {
+      "seed": 22,
+      "step": 0,
+      "parameter_max_abs_difference": 0.0,
+      "parameter_l2_difference": 0.0,
+      "training_batch_identical": true,
+      "bitwise_parameter_update_identical": true,
+      "attention_logit_max_abs_difference": 0.0,
+      "endpoint_kl_mean": 0.0
+    },
+    {
+      "seed": 22,
+      "step": 2,
+      "parameter_max_abs_difference": 0.0,
+      "parameter_l2_difference": 0.0,
+      "training_batch_identical": true,
+      "bitwise_parameter_update_identical": true,
+      "attention_logit_max_abs_difference": 0.0,
+      "endpoint_kl_mean": 0.0
+    },
+    {
+      "seed": 22,
+      "step": 4,
+      "parameter_max_abs_difference": 0.0,
+      "parameter_l2_difference": 0.0,
+      "training_batch_identical": true,
+      "bitwise_parameter_update_identical": true,
+      "attention_logit_max_abs_difference": 0.0,
+      "endpoint_kl_mean": 0.0
+    }
+  ],
+  "all_replays_bitwise_identical": true,
+  "confirmation_dryrun": {
+    "training_commands": 12,
+    "diagnostic_commands": 24,
+    "actually_executed": false
+  },
+  "wikitext103_evaluation_summary_status": "complete",
+  "pg19_evaluation_summary_status": "complete",
+  "final_evaluation_score_tokens_per_model_dataset": 128
+}

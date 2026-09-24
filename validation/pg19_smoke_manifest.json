@@ -1,0 +1,853 @@
+{
+  "schema_version": 1,
+  "dataset": "pg19",
+  "synthetic": false,
+  "dtype": "<u2",
+  "splits": {
+    "test": {
+      "file": "test.bin",
+      "tokens": 1024,
+      "bytes": 2048,
+      "sha256": "f66a65e941aaf764b3caba1111cf19e3c308d45f764fee059267bdbe2bd8413e",
+      "documents_file": "test.documents.jsonl",
+      "documents_sha256": "be1b1675c41a5f18a6c479174fe1a351f1852b3b5508ced8638acb0d89cd845a",
+      "source_documents": 100,
+      "encoded_documents": 1,
+      "within_split_exact_duplicates": 0,
+      "cross_split_exact_duplicates": [],
+      "max_tokens": 1024,
+      "excluded_heldout_exact_duplicates": []
+    }
+  },
+  "versions": {
+    "python": "3.12.14",
+    "numpy": "2.3.5",
+    "tiktoken": "0.9.0",
+    "pyarrow": "25.0.1"
+  },
+  "split_policy": "official PG-19 test only; never used for training or tuning",
+  "token_budget_policy": "deterministic source-order prefix; never shuffle before selection",
+  "text_policy": "source text preserved; GPT-2 EOS between full articles/books; final prefix may truncate a document",
+  "exact_overlap_audit": "full document SHA256 of UTF-8 text.strip(); near-duplicate/semantic overlap not tested",
+  "sources": [
+    {
+      "name": "test/10146.txt",
+      "generation": "1568646214944531",
+      "md5_base64": "C74laep9YvT3z7dOCbo4Jw==",
+      "bytes": 253872,
+      "url": "https://storage.googleapis.com/deepmind-gutenberg/test/10146.txt?generation=1568646214944531",
+      "sha256": "f8dd4334fd8d422cd2f9153ffbff9b097611569592d7ca09fc6fe7881336d331"
+    },
+    {
+      "name": "test/10321.txt",
+      "generation": "1568646214501219",
+      "md5_base64": "G4RkADyUavAaHmb1epQsyg==",
+      "bytes": 324979,
+      "url": "https://storage.googleapis.com/deepmind-gutenberg/test/10321.txt?generation=1568646214501219",
+      "sha256": "fedcb2723c2ad091f76d45eb98efd810977e7b906f6fd8cbd815734d1e90c456"
+    },
+    {
+      "name": "test/10356.txt",
+      "generation": "1568646214278581",
+      "md5_base64": "lRtkd/Q6cmOTmxfDMl+a0Q==",
+      "bytes": 314879,
+      "url": "https://storage.googleapis.com/deepmind-gutenberg/test/10356.txt?generation=1568646214278581",
+      "sha256": "af4b57d358448588adbc6da962cad655bf586ae746dba21f62e956d36d97c88e"
+    },
+    {
+      "name": "test/10762.txt",
+      "generation": "1568646214976790",
+      "md5_base64": "0oiGYFGNRg7xKPwUWaMX9g==",
+      "bytes": 348606,
+      "url": "https://storage.googleapis.com/deepmind-gutenberg/test/10762.txt?generation=1568646214976790",
+      "sha256": "fcc71b161311d4854a078f8cdda6e4381542536167145f6dfdda84bcad256d5f"
+    },
+    {
+      "name": "test/12204.txt",
+      "generation": "1568646214576695",
+      "md5_base64": "hTlray8qLh+KQXrG3ifraw==",
+      "bytes": 24408,
+      "url": "https://storage.googleapis.com/deepmind-gutenberg/test/12204.txt?generation=1568646214576695",
+      "sha256": "e1c79655be744bc89fd291f84b77ddb1819d117f2bba142373f94d5ab309d0d0"
+    },
+    {
+      "name": "test/15562.txt",
+      "generation": "1568646214981134",
+      "md5_base64": "mcKn3LOGlx65mJdhOcT5iA==",
+      "bytes": 222300,
+      "url": "https://storage.googleapis.com/deepmind-gutenberg/test/15562.txt?generation=1568646214981134",
+      "sha256": "90eae481a404688312d407918b07e649643ce6c934a16ad31040614221673ca1"
+    },
+    {
+      "name": "test/22424.txt",
+      "generation": "1568646214215868",
+      "md5_base64": "GxIOmHKjOftITZ42fw3RBQ==",
+      "bytes": 444287,
+      "url": "https://storage.googleapis.com/deepmind-gutenberg/test/22424.txt?generation=1568646214215868",
+      "sha256": "a3475140ed4763614c11c4f2e486e468ae5620bf539877bf769e16710d808a0d"
+    },
+    {
+      "name": "test/24553.txt",
+      "generation": "1568646214202155",
+      "md5_base64": "4f6yqeI8XxmbWYoVKxVIcw==",
+      "bytes": 130627,
+      "url": "https://storage.googleapis.com/deepmind-gutenberg/test/24553.txt?generation=1568646214202155",
+      "sha256": "b188fef90522bd12a523906162d9c3df9987e662025183e3a14e731d866a831a"
+    },
+    {
+      "name": "test/2544.txt",
+      "generation": "1568646214156379",
+      "md5_base64": "4POQ1+rXWjgSTNUrSS8hlg==",
+      "bytes": 352384,
+      "url": "https://storage.googleapis.com/deepmind-gutenberg/test/2544.txt?generation=1568646214156379",
+      "sha256": "0c79ceaf5bcc208b8c924037613c2c7fb1606de21ec8d99d5c446a516c4af787"
+    },
+    {
+      "name": "test/25646.txt",
+      "generation": "1568646214489780",
+      "md5_base64": "7EmXW4L9zGHMokCwaMdIRA==",
+      "bytes": 103323,
+      "url": "https://storage.googleapis.com/deepmind-gutenberg/test/25646.txt?generation=1568646214489780",
+      "sha256": "04af5d410857dab7b4ef5a90d43bff622450b4bc9ee9abfc578487203f423d64"
+    },
+    {
+      "name": "test/25773.txt",
+      "generation": "1568646214528725",
+      "md5_base64": "kZXSya9dngQzoltzwP4zYg==",
+      "bytes": 488162,
+      "url": "https://storage.googleapis.com/deepmind-gutenberg/test/25773.txt?generation=1568646214528725",
+      "sha256": "02dedc58fe901826fe05a6864f377ec2d38993bd8c4e27429152e5e047dd52c4"
+    },
+    {
+      "name": "test/25830.txt",
+      "generation": "1568646214728220",
+      "md5_base64": "heoW3CPMbw7TYhlFh+tlQg==",
+      "bytes": 123962,
+      "url": "https://storage.googleapis.com/deepmind-gutenberg/test/25830.txt?generation=1568646214728220",
+      "sha256": "63a0e5ee09349c28a33fea6a19c88d741307731b2f1a68da9b3982aeda91694f"
+    },
+    {
+      "name": "test/26183.txt",
+      "generation": "1568646215051617",
+      "md5_base64": "d02k0KLByZZuY/8qTSBN0w==",
+      "bytes": 475456,
+      "url": "https://storage.googleapis.com/deepmind-gutenberg/test/26183.txt?generation=1568646215051617",
+      "sha256": "b73ddfcfe10430b96635b021312cbe21eaa6227bf1614b39846d4234d9e12a66"
+    },
+    {
+      "name": "test/26239.txt",
+      "generation": "1568646214804082",
+      "md5_base64": "7J7pnhYTpYcA5Ek8RmeorA==",
+      "bytes": 354117,
+      "url": "https://storage.googleapis.com/deepmind-gutenberg/test/26239.txt?generation=1568646214804082",
+      "sha256": "550798583dc17a1b7f7300591a6531d1f0a3440b6d530c331186814225a36344"
+    },
+    {
+      "name": "test/26493.txt",
+      "generation": "1568646214638437",
+      "md5_base64": "ZzQ525pmHY6MShQ8pXJANQ==",
+      "bytes": 562729,
+      "url": "https://storage.googleapis.com/deepmind-gutenberg/test/26493.txt?generation=1568646214638437",
+      "sha256": "f2088dc639475a627a830a819d2b4ade98e347a840a08980e0fdf35a7f836275"
+    },
+    {
+      "name": "test/26618.txt",
+      "generation": "1568646214276138",
+      "md5_base64": "qEsFqvWvKZPxRES2am1iaQ==",
+      "bytes": 58957,
+      "url": "https://storage.googleapis.com/deepmind-gutenberg/test/26618.txt?generation=1568646214276138",
+      "sha256": "9352d2211b37f9e32ca13ea68027fbec101acf13718ff96c606e766f9144b677"
+    },
+    {
+      "name": "test/27454.txt",
+      "generation": "1568646214323423",
+      "md5_base64": "0kOe60A52D+2hgUgpEZwzQ==",
+      "bytes": 404307,
+      "url": "https://storage.googleapis.com/deepmind-gutenberg/test/27454.txt?generation=1568646214323423",
+      "sha256": "0f5a3efba148e8435ae9acc4a34e570369d493d635413d56a3044b08d70f6d9a"
+    },
+    {
+      "name": "test/28444.txt",
+      "generation": "1568646215053698",
+      "md5_base64": "zVORmqVG5NpODzj8MoYy0A==",
+      "bytes": 335975,
+      "url": "https://storage.googleapis.com/deepmind-gutenberg/test/28444.txt?generation=1568646215053698",
+      "sha256": "f7bd54971caf53bc3ca651cacbaaefae402812b56918f6c4b5dcaeb6a279864f"
+    },
+    {
+      "name": "test/28988.txt",
+      "generation": "1568646214411391",
+      "md5_base64": "rGmekL+z/CsYZpo1xadpJw==",
+      "bytes": 737008,
+      "url": "https://storage.googleapis.com/deepmind-gutenberg/test/28988.txt?generation=1568646214411391",
+      "sha256": "5ba1eb22b96320155afd942871f76b1f040d4918d9871a1d4b854176c7015567"
+    },
+    {
+      "name": "test/29594.txt",
+      "generation": "1568646213853071",
+      "md5_base64": "/9f0VCQSweCAPsCBZJMCrg==",
+      "bytes": 86075,
+      "url": "https://storage.googleapis.com/deepmind-gutenberg/test/29594.txt?generation=1568646213853071",
+      "sha256": "f4590fbca52dedf54ce45d1ef6ad6d01875d8cde22796213c40dd01dc971696a"
+    },
+    {
+      "name": "test/29973.txt",
+      "generation": "1568646214401826",
+      "md5_base64": "8apZjYAEGIW/ER8sIZuNPg==",
+      "bytes": 168905,
+      "url": "https://storage.googleapis.com/deepmind-gutenberg/test/29973.txt?generation=1568646214401826",
+      "sha256": "349ac4532773414f8da1723d38f09ffad5911018fb380365022e6e76e48abf46"
+    },
+    {
+      "name": "test/30312.txt",
+      "generation": "1568646214454976",
+      "md5_base64": "3vkrPk0zbVopLpMEqOMD4g==",
+      "bytes": 2502293,
+      "url": "https://storage.googleapis.com/deepmind-gutenberg/test/30312.txt?generation=1568646214454976",
+      "sha256": "4d9c0b401a9fd85b169a744d76c9e88e1d2a4b5d9a690c40fa2bf98164823032"
+    },
+    {
+      "name": "test/30752.txt",
+      "generation": "1568646214189823",
+      "md5_base64": "L7E7fl+A/W71brExyi5CGw==",
+      "bytes": 171844,
+      "url": "https://storage.googleapis.com/deepmind-gutenberg/test/30752.txt?generation=1568646214189823",
+      "sha256": "14f951b46330ff912bf29fe4888d668fc4693cd05b9d87f0c2fd0d985f3c29de"
+    },
+    {
+      "name": "test/30754.txt",
+      "generation": "1568646214202385",
+      "md5_base64": "L8Q7q1l7vH3JuskQ5gCtBA==",
+      "bytes": 916394,
+      "url": "https://storage.googleapis.com/deepmind-gutenberg/test/30754.txt?generation=1568646214202385",
+      "sha256": "f01af5df32ed5c8c4f5e99121f85d25667d45579da31856e9d572fd09810dd50"
+    },
+    {
+      "name": "test/30909.txt",
+      "generation": "1568646213971225",
+      "md5_base64": "WDP+SSs11zEqhitiW/6gXA==",
+      "bytes": 190582,
+      "url": "https://storage.googleapis.com/deepmind-gutenberg/test/30909.txt?generation=1568646213971225",
+      "sha256": "1eebeea3739f55afd5d47e989fca2657022e72829abcab070af599cefa62dc92"
+    },
+    {
+      "name": "test/30981.txt",
+      "generation": "1568646214298769",
+      "md5_base64": "6F1ZN3tU9z84RrPUYsZ3MA==",
+      "bytes": 153798,
+      "url": "https://storage.googleapis.com/deepmind-gutenberg/test/30981.txt?generation=1568646214298769",
+      "sha256": "c77512286586b2c9367f8ad0e493e947c42f03fb5cb4d20f84db78c1eaac4dfe"
+    },
+    {
+      "name": "test/31065.txt",
+      "generation": "1568646213936243",
+      "md5_base64": "xfn2Cod0QOqewsKJQPCmzQ==",
+      "bytes": 276227,
+      "url": "https://storage.googleapis.com/deepmind-gutenberg/test/31065.txt?generation=1568646213936243",
+      "sha256": "9d8228e48a41bef67408a097a3598588325bc70d5e2f6b00c96372783029d05f"
+    },
+    {
+      "name": "test/3129.txt",
+      "generation": "1568646214350757",
+      "md5_base64": "CiT2+gFRwE/30Wxnrt7pVQ==",
+      "bytes": 82156,
+      "url": "https://storage.googleapis.com/deepmind-gutenberg/test/3129.txt?generation=1568646214350757",
+      "sha256": "7e561c6b6d4fa20f508b9484f56a9703a88d469e7c2d7a47d91e74431e4c6ff0"
+    },
+    {
+      "name": "test/31974.txt",
+      "generation": "1568646214288274",
+      "md5_base64": "vfc8Y53yXSCuPC9uVUXrxg==",
+      "bytes": 14880,
+      "url": "https://storage.googleapis.com/deepmind-gutenberg/test/31974.txt?generation=1568646214288274",
+      "sha256": "9b4f3142b8512a98e0e245140f6aaad36bd50eac5d1684d04513ead2a7fc1df0"
+    },
+    {
+      "name": "test/3247.txt",
+      "generation": "1568646215407010",
+      "md5_base64": "fyvb7DghAe0Tj05RXFCaYg==",
+      "bytes": 539667,
+      "url": "https://storage.googleapis.com/deepmind-gutenberg/test/3247.txt?generation=1568646215407010",
+      "sha256": "aa97806b530ffb25b5678e4c562e49055715eb5734c533c0b244537734b6a59c"
+    },
+    {
+      "name": "test/32761.txt",
+      "generation": "1568646215130824",
+      "md5_base64": "cYNa9AaeDoww+rIkARvI5g==",
+      "bytes": 506070,
+      "url": "https://storage.googleapis.com/deepmind-gutenberg/test/32761.txt?generation=1568646215130824",
+      "sha256": "cd0c0c4cb9508cbabd73f90673c63363bf03e2d72aa87de2e86ed895689c3c13"
+    },
+    {
+      "name": "test/3340.txt",
+      "generation": "1568646214725370",
+      "md5_base64": "yDnuXZhtNXBw6gyMqZb3Rg==",
+      "bytes": 392865,
+      "url": "https://storage.googleapis.com/deepmind-gutenberg/test/3340.txt?generation=1568646214725370",
+      "sha256": "0d3bea08577a6bde3265827ddf5e688d8aa8ce1ab4ff4243075358c19709d788"
+    },
+    {
+      "name": "test/33426.txt",
+      "generation": "1568646214107316",
+      "md5_base64": "wv5DALc0wT7DTJYm0WqeUQ==",
+      "bytes": 465022,
+      "url": "https://storage.googleapis.com/deepmind-gutenberg/test/33426.txt?generation=1568646214107316",
+      "sha256": "5f241da148e653140f9cafab7c93a0ff0f3e1d214077137b85fe8668a0bd522f"
+    },
+    {
+      "name": "test/33756.txt",
+      "generation": "1568646214785863",
+      "md5_base64": "u5IscJzP2Dq5TxCK8QgNtA==",
+      "bytes": 322011,
+      "url": "https://storage.googleapis.com/deepmind-gutenberg/test/33756.txt?generation=1568646214785863",
+      "sha256": "636bea04db47134816380f2d03d735d46970fe214a0e11bd87d97f270d237cf4"
+    },
+    {
+      "name": "test/34467.txt",
+      "generation": "1568646214303254",
+      "md5_base64": "GO4xKK1EXzy7XtIGN+9goA==",
+      "bytes": 207793,
+      "url": "https://storage.googleapis.com/deepmind-gutenberg/test/34467.txt?generation=1568646214303254",
+      "sha256": "32d9cc33391e172ebaf885e574b365ee9738fa0041537a5c8a9859e7d84b6181"
+    },
+    {
+      "name": "test/35205.txt",
+      "generation": "1568646214328320",
+      "md5_base64": "R8we3D2PZ/YM7QUIflxbFQ==",
+      "bytes": 364651,
+      "url": "https://storage.googleapis.com/deepmind-gutenberg/test/35205.txt?generation=1568646214328320",
+      "sha256": "05440b6f4c77d4204facc7c8ec5ebea3df8fef5782f03cb041f2accd184265f9"
+    },
+    {
+      "name": "test/35246.txt",
+      "generation": "1568646214040054",
+      "md5_base64": "+6i6KE9e4GcXLkP7gVZlLw==",
+      "bytes": 228141,
+      "url": "https://storage.googleapis.com/deepmind-gutenberg/test/35246.txt?generation=1568646214040054",
+      "sha256": "4362445794452e6df50919837f9aa851539a11eaed673b8eb3ed613ac0b1a84b"
+    },
+    {
+      "name": "test/3608.txt",
+      "generation": "1568646214680601",
+      "md5_base64": "nM4XzFfUJ61jQPlFCNPG4g==",
+      "bytes": 1434234,
+      "url": "https://storage.googleapis.com/deepmind-gutenberg/test/3608.txt?generation=1568646214680601",
+      "sha256": "acfd0b06c2fea46583b113cf10df45d83f24f3b85bf2d8ccd22d2f0a1127dc9a"
+    },
+    {
+      "name": "test/36256.txt",
+      "generation": "1568646214645098",
+      "md5_base64": "anzxwzxGFsDS08drAsx/iw==",
+      "bytes": 100759,
+      "url": "https://storage.googleapis.com/deepmind-gutenberg/test/36256.txt?generation=1568646214645098",
+      "sha256": "84ec4641bc67f1c91c19be710e42f6009dec808e5f174fede2ef65d00e5d2a92"
+    },
+    {
+      "name": "test/37006.txt",
+      "generation": "1568646214947694",
+      "md5_base64": "y/6FguAj+ddtH500iUndnQ==",
+      "bytes": 156555,
+      "url": "https://storage.googleapis.com/deepmind-gutenberg/test/37006.txt?generation=1568646214947694",
+      "sha256": "1680b3efa53c5f1267a6fb0bebd30c4f224093e1ccaa8af2f7c179b5f95c4bb2"
+    },
+    {
+      "name": "test/37328.txt",
+      "generation": "1568646214728220",
+      "md5_base64": "InoOT3LJRs+TCh9v/OXm5A==",
+      "bytes": 148769,
+      "url": "https://storage.googleapis.com/deepmind-gutenberg/test/37328.txt?generation=1568646214728220",
+      "sha256": "5adf5e9ded08c343b60cb66b553a696a27e3724d9f4410839333d37699063ffe"
+    },
+    {
+      "name": "test/37403.txt",
+      "generation": "1568646215025798",
+      "md5_base64": "lLrkxnoWRBYuCu6J121JEQ==",
+      "bytes": 100089,
+      "url": "https://storage.googleapis.com/deepmind-gutenberg/test/37403.txt?generation=1568646215025798",
+      "sha256": "071262841d7a577585a182101d028fa7bd79683c99bf27c2db3b570e6d24d101"
+    },
+    {
+      "name": "test/37443.txt",
+      "generation": "1568646214899658",
+      "md5_base64": "ylwnOYyZ7TGDvsZAdEUg5A==",
+      "bytes": 24491,
+      "url": "https://storage.googleapis.com/deepmind-gutenberg/test/37443.txt?generation=1568646214899658",
+      "sha256": "398fec2e5baf93fb4614b7a8ae5f425a59f5b6fc1182f47336e641520826c4a5"
+    },
+    {
+      "name": "test/3754.txt",
+      "generation": "1568646214748125",
+      "md5_base64": "OJdSowhsRIgk3ZQFmDX2mQ==",
+      "bytes": 507933,
+      "url": "https://storage.googleapis.com/deepmind-gutenberg/test/3754.txt?generation=1568646214748125",
+      "sha256": "05c3b16201f534fd6ab8643feb9b1c59e482a913c9a47fd513255791d9e67f60"
+    },
+    {
+      "name": "test/37702.txt",
+      "generation": "1568646215175760",
+      "md5_base64": "81KV35nDUUrOHrUp/lZiuA==",
+      "bytes": 892108,
+      "url": "https://storage.googleapis.com/deepmind-gutenberg/test/37702.txt?generation=1568646215175760",
+      "sha256": "30bd8b5ca13be6439e231389f94f4d2d7fdf3b15cf0b0202842cee38c5f17260"
+    },
+    {
+      "name": "test/38106.txt",
+      "generation": "1568646215169516",
+      "md5_base64": "buz87rUnlpGQPnhEX36vpA==",
+      "bytes": 391972,
+      "url": "https://storage.googleapis.com/deepmind-gutenberg/test/38106.txt?generation=1568646215169516",
+      "sha256": "c30406db957f15aecdbafc1d9a2a4c2186f1e9762ccb0042ea1011cbc66c814c"
+    },
+    {
+      "name": "test/3890.txt",
+      "generation": "1568646215306394",
+      "md5_base64": "CMxadIBLZZ+2A/cYD+a0JA==",
+      "bytes": 163873,
+      "url": "https://storage.googleapis.com/deepmind-gutenberg/test/3890.txt?generation=1568646215306394",
+      "sha256": "3163b5e7a5ee8ca3eb44e7e647872b433cefc10877ad1299478acdf074a581fa"
+    },
+    {
+      "name": "test/38929.txt",
+      "generation": "1568646215350541",
+      "md5_base64": "3qX8SCoacjbEm+mfQPsOlw==",
+      "bytes": 172077,
+      "url": "https://storage.googleapis.com/deepmind-gutenberg/test/38929.txt?generation=1568646215350541",
+      "sha256": "ad532648088c15a70d19ff3d66482e9c3a401c8cf399c44e6b2e7694c835f1d3"
+    },
+    {
+      "name": "test/38955.txt",
+      "generation": "1568646215460850",
+      "md5_base64": "KZuXJIIYZpuzZC9ok+erzg==",
+      "bytes": 282624,
+      "url": "https://storage.googleapis.com/deepmind-gutenberg/test/38955.txt?generation=1568646215460850",
+      "sha256": "540fa42d430263cc4662caa95b33e5e5c8babbdedda671f800a2db65ff25a485"
+    },
+    {
+      "name": "test/4047.txt",
+      "generation": "1568646215287530",
+      "md5_base64": "ZEoD2ZiELp2a2n1MrYwAOQ==",
+      "bytes": 624607,
+      "url": "https://storage.googleapis.com/deepmind-gutenberg/test/4047.txt?generation=1568646215287530",
+      "sha256": "a1126b6bec29256f9e92fb120c71520623694813d3a9772853c09ad1c5f75f8a"
+    },
+    {
+      "name": "test/40579.txt",
+      "generation": "1568646215120328",
+      "md5_base64": "n0ly2I4xmHM5OXUNtW8hSg==",
+      "bytes": 355979,
+      "url": "https://storage.googleapis.com/deepmind-gutenberg/test/40579.txt?generation=1568646215120328",
+      "sha256": "6564c4b893231d7b39a195e10d734a53506350fb6c2af16105a67365eded11cc"
+    },
+    {
+      "name": "test/40700.txt",
+      "generation": "1568646214899570",
+      "md5_base64": "p7cUOPAhyTles1KmvQUGOg==",
+      "bytes": 148045,
+      "url": "https://storage.googleapis.com/deepmind-gutenberg/test/40700.txt?generation=1568646214899570",
+      "sha256": "c8dbe3563ca688278bcfa09b673bd177e2500ecb243cfb34a00690823b113c9c"
+    },
+    {
+      "name": "test/4128.txt",
+      "generation": "1568646215076607",
+      "md5_base64": "Q3ZMO32cpW73vuG9k25uMg==",
+      "bytes": 95877,
+      "url": "https://storage.googleapis.com/deepmind-gutenberg/test/4128.txt?generation=1568646215076607",
+      "sha256": "23a359e1c8734cf74372442fbedc6ec6bf9ecaf47e6936628cb6dba90fb6409b"
+    },
+    {
+      "name": "test/41603.txt",
+      "generation": "1568646215474867",
+      "md5_base64": "qEJlDBL6c5rYlCGyrMMImA==",
+      "bytes": 274624,
+      "url": "https://storage.googleapis.com/deepmind-gutenberg/test/41603.txt?generation=1568646215474867",
+      "sha256": "f24c812cb32ad195a0a5d779d43579179a4e8e5add019d49de3536d9163ae3c6"
+    },
+    {
+      "name": "test/41607.txt",
+      "generation": "1568646215121078",
+      "md5_base64": "sWXAfJU21nHtb1P5valtIw==",
+      "bytes": 337917,
+      "url": "https://storage.googleapis.com/deepmind-gutenberg/test/41607.txt?generation=1568646215121078",
+      "sha256": "d630ebc88f0a16f42c770d581e05cee96ae444d84039eeb46c025f7da51fc09e"
+    },
+    {
+      "name": "test/42081.txt",
+      "generation": "1568646215284351",
+      "md5_base64": "vL+by1xcREwnfNIB50Il9Q==",
+      "bytes": 844569,
+      "url": "https://storage.googleapis.com/deepmind-gutenberg/test/42081.txt?generation=1568646215284351",
+      "sha256": "70f8bdb8a20026f5651b800e58b5210d501852cdd99ee637084ebc85dd99584a"
+    },
+    {
+      "name": "test/42655.txt",
+      "generation": "1568646215322683",
+      "md5_base64": "ajKtvSwCvl2Lgf+V8ap84w==",
+      "bytes": 882218,
+      "url": "https://storage.googleapis.com/deepmind-gutenberg/test/42655.txt?generation=1568646215322683",
+      "sha256": "06b9d5036c9191b9ab7008931096f40ddcf467f98b1dd03accea1617aca495e6"
+    },
+    {
+      "name": "test/43536.txt",
+      "generation": "1568646215466178",
+      "md5_base64": "vyvZUy6veHnp4PUletyeBg==",
+      "bytes": 55719,
+      "url": "https://storage.googleapis.com/deepmind-gutenberg/test/43536.txt?generation=1568646215466178",
+      "sha256": "2d3b016b1ad7e5d81a96d1094800996fb1c97e32ad34e2f344bdca760cea3b65"
+    },
+    {
+      "name": "test/43845.txt",
+      "generation": "1568646215071607",
+      "md5_base64": "XFwKMaZW5yHaVY6Cd8ovjA==",
+      "bytes": 57163,
+      "url": "https://storage.googleapis.com/deepmind-gutenberg/test/43845.txt?generation=1568646215071607",
+      "sha256": "a02e28569346e8e561b4574ab60a6f4dd01dd9f9ddccca2241fe961f9c186537"
+    },
+    {
+      "name": "test/44099.txt",
+      "generation": "1568646215309212",
+      "md5_base64": "PRKhB7Qy0kTXKqFIW4BiCg==",
+      "bytes": 147224,
+      "url": "https://storage.googleapis.com/deepmind-gutenberg/test/44099.txt?generation=1568646215309212",
+      "sha256": "496ccf8a9235dc7f820271404a48d00e5cb4a1faf9842fa86160df56261281cc"
+    },
+    {
+      "name": "test/44557.txt",
+      "generation": "1568646215466153",
+      "md5_base64": "exGDgFooF976+YYGvafHjA==",
+      "bytes": 244883,
+      "url": "https://storage.googleapis.com/deepmind-gutenberg/test/44557.txt?generation=1568646215466153",
+      "sha256": "35a78d3b4dcdd964ba3e36d1ce662941a2d9410f4bb7a7b04880a9379468e217"
+    },
+    {
+      "name": "test/45313.txt",
+      "generation": "1568646215906785",
+      "md5_base64": "W3Q6slrvke3zXEHbvIgzCQ==",
+      "bytes": 4574066,
+      "url": "https://storage.googleapis.com/deepmind-gutenberg/test/45313.txt?generation=1568646215906785",
+      "sha256": "f91cd91b6af593ffa0cbe969bf220350bcafd613e3f982f415e7ffe5f45e45bf"
+    },
+    {
+      "name": "test/45881.txt",
+      "generation": "1568646214949233",
+      "md5_base64": "Tu/JHaClKJJjGg+VFKUw0A==",
+      "bytes": 217753,
+      "url": "https://storage.googleapis.com/deepmind-gutenberg/test/45881.txt?generation=1568646214949233",
+      "sha256": "0679c4e2815a953073365d556046421bad38c561d9389375b2d874eab195fa33"
+    },
+    {
+      "name": "test/45888.txt",
+      "generation": "1568646215340140",
+      "md5_base64": "SzD7qBVcU0Pt6osWUSb7Uw==",
+      "bytes": 282211,
+      "url": "https://storage.googleapis.com/deepmind-gutenberg/test/45888.txt?generation=1568646215340140",
+      "sha256": "86385daf220051742b03c4835c426b3fdb6fc4493fec31f390725ad80212439f"
+    },
+    {
+      "name": "test/46915.txt",
+      "generation": "1568646215296879",
+      "md5_base64": "EbJZJwdJpBkcjEFkd3XwHQ==",
+      "bytes": 429060,
+      "url": "https://storage.googleapis.com/deepmind-gutenberg/test/46915.txt?generation=1568646215296879",
+      "sha256": "4786e48c791bb791957b629eee30de504a8e03fb35fa0092bef278c8ed10ee83"
+    },
+    {
+      "name": "test/47068.txt",
+      "generation": "1568646215130359",
+      "md5_base64": "r8kNySQ5zE73mY90Lin5jw==",
+      "bytes": 351283,
+      "url": "https://storage.googleapis.com/deepmind-gutenberg/test/47068.txt?generation=1568646215130359",
+      "sha256": "5b3ac02939097187672f624d0c440388292e70bdb4a721001cb5991db4d65de4"
+    },
+    {
+      "name": "test/47558.txt",
+      "generation": "1568646215309498",
+      "md5_base64": "O8lafMEuR/3a8EePtZXaqA==",
+      "bytes": 147889,
+      "url": "https://storage.googleapis.com/deepmind-gutenberg/test/47558.txt?generation=1568646215309498",
+      "sha256": "1233554c460bac754d1483649bb26c02ecccc5293bea2748b97c156e7b18f316"
+    },
+    {
+      "name": "test/47581.txt",
+      "generation": "1568646214985068",
+      "md5_base64": "JVHtmVMT5yDJ/VG8yJT7Gw==",
+      "bytes": 74970,
+      "url": "https://storage.googleapis.com/deepmind-gutenberg/test/47581.txt?generation=1568646214985068",
+      "sha256": "6c5056dc6c3b1f04ff44c4e7ed081c699fdce974bde23443c9a67902b7710757"
+    },
+    {
+      "name": "test/47676.txt",
+      "generation": "1568646215334832",
+      "md5_base64": "H10QpnsCyi6S21cLIDVfrg==",
+      "bytes": 311749,
+      "url": "https://storage.googleapis.com/deepmind-gutenberg/test/47676.txt?generation=1568646215334832",
+      "sha256": "f343ccc3e34d5cc819fb4eb11b59f2ec7d4a8c2a67ec59eef2e9f614f5e680fd"
+    },
+    {
+      "name": "test/48693.txt",
+      "generation": "1568646215569648",
+      "md5_base64": "HQqkD3dfGrfRbac8Urc7Yg==",
+      "bytes": 410440,
+      "url": "https://storage.googleapis.com/deepmind-gutenberg/test/48693.txt?generation=1568646215569648",
+      "sha256": "68fa97ed43ba3245cfb9329d9875d6d40b5e776aeb47eba94bef976baf4008ab"
+    },
+    {
+      "name": "test/49078.txt",
+      "generation": "1568646215336643",
+      "md5_base64": "hc5V+glnxDtb02hurW9Qcg==",
+      "bytes": 147677,
+      "url": "https://storage.googleapis.com/deepmind-gutenberg/test/49078.txt?generation=1568646215336643",
+      "sha256": "84a2b672270646dd6f517d4331853256dd80b68d317e5574eb04cec9efd3b5e5"
+    },
+    {
+      "name": "test/49529.txt",
+      "generation": "1568646215365210",
+      "md5_base64": "78spIVud2UHXHXt5P/CT2w==",
+      "bytes": 412383,
+      "url": "https://storage.googleapis.com/deepmind-gutenberg/test/49529.txt?generation=1568646215365210",
+      "sha256": "d7887877fe2e794196b741c6c122c605df89818d9a7c37e7406ae234acc8d329"
+    },
+    {
+      "name": "test/49596.txt",
+      "generation": "1568646215335271",
+      "md5_base64": "srr2n1Qzn6Mu3OkT1371XA==",
+      "bytes": 97986,
+      "url": "https://storage.googleapis.com/deepmind-gutenberg/test/49596.txt?generation=1568646215335271",
+      "sha256": "514b46b3b4b6b98886ad099f8876c518fd9210de49c1ac7e7cf6914b2c8170bc"
+    },
+    {
+      "name": "test/50287.txt",
+      "generation": "1568646215339497",
+      "md5_base64": "PWIjnWe7IAoB5rjY9N1bDw==",
+      "bytes": 302777,
+      "url": "https://storage.googleapis.com/deepmind-gutenberg/test/50287.txt?generation=1568646215339497",
+      "sha256": "30dd0fd8115a489b316e7e4585b3ba3ef54a80590d5ee0b20dea3cad8adbd6c6"
+    },
+    {
+      "name": "test/51410.txt",
+      "generation": "1568646215610819",
+      "md5_base64": "2kU39zsWV7DnzmELN5IStw==",
+      "bytes": 349790,
+      "url": "https://storage.googleapis.com/deepmind-gutenberg/test/51410.txt?generation=1568646215610819",
+      "sha256": "b6a0f83faf217077d871f4607ec6edf2c0da7d4e61692edfe4a6bdd3f4ebe39c"
+    },
+    {
+      "name": "test/53345.txt",
+      "generation": "1568646215121737",
+      "md5_base64": "cuR+ItVEfoGN+u+L9N/zsg==",
+      "bytes": 347642,
+      "url": "https://storage.googleapis.com/deepmind-gutenberg/test/53345.txt?generation=1568646215121737",
+      "sha256": "bfb2a98da02fbb42f1f8394ee09119cdffe75ab98fbfcd383a4b1fe86efc3382"
+    },
+    {
+      "name": "test/5396.txt",
+      "generation": "1568646215287853",
+      "md5_base64": "k6bhdmDbyx6IdA2QDj0v+A==",
+      "bytes": 956818,
+      "url": "https://storage.googleapis.com/deepmind-gutenberg/test/5396.txt?generation=1568646215287853",
+      "sha256": "ff10a13b1a0007d7c1a06ebc5c5e85990063c43bbc44af62059455631f62dc42"
+    },
+    {
+      "name": "test/54537.txt",
+      "generation": "1568646215115044",
+      "md5_base64": "marg1BoX503ye1aeeTrY1w==",
+      "bytes": 200630,
+      "url": "https://storage.googleapis.com/deepmind-gutenberg/test/54537.txt?generation=1568646215115044",
+      "sha256": "0d117fc278fee172617e45f38b1c60b45dde0af22bd11837c18a94412c0ce345"
+    },
+    {
+      "name": "test/54624.txt",
+      "generation": "1568646215366933",
+      "md5_base64": "//ZIGUmhbS0hbe7Duuj7kQ==",
+      "bytes": 70363,
+      "url": "https://storage.googleapis.com/deepmind-gutenberg/test/54624.txt?generation=1568646215366933",
+      "sha256": "8c7c0d63e4253003d93727e5d9dfe1245ecfef2ac71fc4b48969f685d150e6e8"
+    },
+    {
+      "name": "test/55339.txt",
+      "generation": "1568646215205740",
+      "md5_base64": "Wz7eZCFamQJCSweAB6ojfQ==",
+      "bytes": 663065,
+      "url": "https://storage.googleapis.com/deepmind-gutenberg/test/55339.txt?generation=1568646215205740",
+      "sha256": "016fc415740042c97a07ef87779facf1ac5f73adbd87f5f733a92767aa7c9e59"
+    },
+    {
+      "name": "test/55871.txt",
+      "generation": "1568646215837462",
+      "md5_base64": "7Z1Otz8SC0zBRNnXi1lxuQ==",
+      "bytes": 1448175,
+      "url": "https://storage.googleapis.com/deepmind-gutenberg/test/55871.txt?generation=1568646215837462",
+      "sha256": "f2f9d8771c2d07a2f669daf07311340413b93c3340feeaaf1457d00c7cbe28c1"
+    },
+    {
+      "name": "test/56410.txt",
+      "generation": "1568646215300785",
+      "md5_base64": "irWu+X6f4rpmx5q5p5bhKw==",
+      "bytes": 111994,
+      "url": "https://storage.googleapis.com/deepmind-gutenberg/test/56410.txt?generation=1568646215300785",
+      "sha256": "5a0dfe99fad39f1b18ab1cc051527ccfdef12e214a22cc27264f25b21bd8c154"
+    },
+    {
+      "name": "test/5734.txt",
+      "generation": "1568646215770565",
+      "md5_base64": "UKgXieybi6vndXyL/yLdeQ==",
+      "bytes": 581320,
+      "url": "https://storage.googleapis.com/deepmind-gutenberg/test/5734.txt?generation=1568646215770565",
+      "sha256": "ebec4c08c5dd799ce02f3ff91e380242f50d79e8700310ec5f57d66fd38bdd09"
+    },
+    {
+      "name": "test/5770.txt",
+      "generation": "1568646215164405",
+      "md5_base64": "INSFlE2KTrpFZxuj3yzqIw==",
+      "bytes": 246697,
+      "url": "https://storage.googleapis.com/deepmind-gutenberg/test/5770.txt?generation=1568646215164405",
+      "sha256": "1f04507f01f6d19e871095037ff4742745bda5a1583ee792f6a386d1228b32ff"
+    },
+    {
+      "name": "test/57791.txt",
+      "generation": "1568646215422236",
+      "md5_base64": "ldxXF5er0/TyVLq6thnxIw==",
+      "bytes": 101957,
+      "url": "https://storage.googleapis.com/deepmind-gutenberg/test/57791.txt?generation=1568646215422236",
+      "sha256": "f8117b124fc2da28f823a9add2a69a4d528a8b7a649573f864df442740dd537d"
+    },
+    {
+      "name": "test/58473.txt",
+      "generation": "1568646215104598",
+      "md5_base64": "cg7Gui8Hlncujx7GpEfL4Q==",
+      "bytes": 150101,
+      "url": "https://storage.googleapis.com/deepmind-gutenberg/test/58473.txt?generation=1568646215104598",
+      "sha256": "adbe37933adf00031d0fa3a243556b9d7ff12e7de9933b67883e1eb64b3e1ae2"
+    },
+    {
+      "name": "test/58553.txt",
+      "generation": "1568646215355766",
+      "md5_base64": "fy+dt18CD66uzGunn9nXZg==",
+      "bytes": 211173,
+      "url": "https://storage.googleapis.com/deepmind-gutenberg/test/58553.txt?generation=1568646215355766",
+      "sha256": "6ee7e3af2b427cdb48132e8debd6d0013927b31d0980aa505832b0f85666f489"
+    },
+    {
+      "name": "test/58598.txt",
+      "generation": "1568646215437385",
+      "md5_base64": "rSrxBtoMkfS9WJnIgGAeGA==",
+      "bytes": 115036,
+      "url": "https://storage.googleapis.com/deepmind-gutenberg/test/58598.txt?generation=1568646215437385",
+      "sha256": "e6b356ae9cd31ec1d719b4e2f5ce7c74e35a367668974407fd8e7d735455fb20"
+    },
+    {
+      "name": "test/5956.txt",
+      "generation": "1568646215477983",
+      "md5_base64": "4mNCpY33+RI/JSs6mD1AYQ==",
+      "bytes": 260972,
+      "url": "https://storage.googleapis.com/deepmind-gutenberg/test/5956.txt?generation=1568646215477983",
+      "sha256": "c1c1981b187036d4a00f0ba9c2fd65c06c43663a4593a1ce7bd01bbe8125bd19"
+    },
+    {
+      "name": "test/5962.txt",
+      "generation": "1568646215499659",
+      "md5_base64": "Gl9zfQT2+C/UDUWAoPmHHw==",
+      "bytes": 459976,
+      "url": "https://storage.googleapis.com/deepmind-gutenberg/test/5962.txt?generation=1568646215499659",
+      "sha256": "c19a6febe9781833f02598cf157fc1c45b65d8994f2674e88410cd00eea7ad6d"
+    },
+    {
+      "name": "test/6412.txt",
+      "generation": "1568646215812450",
+      "md5_base64": "qgvmQtD9jdo69S9VXJLQGg==",
+      "bytes": 871566,
+      "url": "https://storage.googleapis.com/deepmind-gutenberg/test/6412.txt?generation=1568646215812450",
+      "sha256": "11c74dd875e9e5659b587ce8705acea74227ca19ed0afa184ab9f450d9dd3a95"
+    },
+    {
+      "name": "test/6941.txt",
+      "generation": "1568646215602843",
+      "md5_base64": "01/VMNAuYiwlTWIx59zpjQ==",
+      "bytes": 1064483,
+      "url": "https://storage.googleapis.com/deepmind-gutenberg/test/6941.txt?generation=1568646215602843",
+      "sha256": "1f7197a758f44b85bd0b279387c74753fe8c5afdcd9531ec9247c4fd5cedd0ca"
+    },
+    {
+      "name": "test/7412.txt",
+      "generation": "1568646215908606",
+      "md5_base64": "QXOCMAMcDMQzHYJKtJTVfA==",
+      "bytes": 955823,
+      "url": "https://storage.googleapis.com/deepmind-gutenberg/test/7412.txt?generation=1568646215908606",
+      "sha256": "2dd3367161538f4a6546ea30c18e772160c84927710bebba3e7f5ea8a6ffd42b"
+    },
+    {
+      "name": "test/7987.txt",
+      "generation": "1568646215581015",
+      "md5_base64": "SdnAf88toyX6laVaCdGqvg==",
+      "bytes": 1048869,
+      "url": "https://storage.googleapis.com/deepmind-gutenberg/test/7987.txt?generation=1568646215581015",
+      "sha256": "cae86a95f8467d55800af340ee360c83a97f0ee35536ad9ff4d9a0132617fd2a"
+    },
+    {
+      "name": "test/8197.txt",
+      "generation": "1568646215582617",
+      "md5_base64": "DjlIOFx2c2PzVGrZpPJBhA==",
+      "bytes": 137711,
+      "url": "https://storage.googleapis.com/deepmind-gutenberg/test/8197.txt?generation=1568646215582617",
+      "sha256": "68d02bd36db0180bf70c7f95afc54541f588618b25c59a39cc60018f51070ca3"
+    },
+    {
+      "name": "test/8559.txt",
+      "generation": "1568646215495154",
+      "md5_base64": "kMFzM93e9VbCoOZbnj2HCA==",
+      "bytes": 236569,
+      "url": "https://storage.googleapis.com/deepmind-gutenberg/test/8559.txt?generation=1568646215495154",
+      "sha256": "eed15b11e09b418eee4e8b38bd324b805934abbb22c340c7561514a89be4b981"
+    },
+    {
+      "name": "test/860.txt",
+      "generation": "1568646215641686",
+      "md5_base64": "dOUNGNNxlqFe9F1sFkeLbQ==",
+      "bytes": 280293,
+      "url": "https://storage.googleapis.com/deepmind-gutenberg/test/860.txt?generation=1568646215641686",
+      "sha256": "4b52c996d63bfeb3c942fff20b6b2298d3455be8954d44a3350022c3187dd584"
+    },
+    {
+      "name": "test/8788.txt",
+      "generation": "1568646215569994",
+      "md5_base64": "OxYK8RSQsB59iw0iIgRHdQ==",
+      "bytes": 19415,
+      "url": "https://storage.googleapis.com/deepmind-gutenberg/test/8788.txt?generation=1568646215569994",
+      "sha256": "5e76554a61fcfb22932070305961f737c573134363f96ae18971b2428e2f7874"
+    },
+    {
+      "name": "test/9315.txt",
+      "generation": "1568646215505822",
+      "md5_base64": "WUYQa4qTcXDotoXj+s2bbQ==",
+      "bytes": 22463,
+      "url": "https://storage.googleapis.com/deepmind-gutenberg/test/9315.txt?generation=1568646215505822",
+      "sha256": "0be37609fae1df19c234b8e5c54ea41f538d6963554fad9bc55ae073b3dec79b"
+    },
+    {
+      "name": "test/9931.txt",
+      "generation": "1568646215649111",
+      "md5_base64": "dzHZ7GLgns2tKITSx72IdQ==",
+      "bytes": 521935,
+      "url": "https://storage.googleapis.com/deepmind-gutenberg/test/9931.txt?generation=1568646215649111",
+      "sha256": "23935eb122717a05d7153e7c6ab95a9000c116139fa5af4b403513ead6f0c61a"
+    }
+  ],
+  "vocab_size": 50257,
+  "eos_token": 50256,
+  "tokenizer": {
+    "name": "gpt2",
+    "implementation": "tiktoken",
+    "assets_sha256": {
+      "https://openaipublic.blob.core.windows.net/gpt-2/encodings/main/vocab.bpe": "1ce1664773c50f3e0cc8842619a93edc4624525b728b188a9e0be33b7726adc5",
+      "https://openaipublic.blob.core.windows.net/gpt-2/encodings/main/encoder.json": "196139668be63f3b5d6574427317ae82f612a97c5d1cdaf36ed2256dbf636783"
+    }
+  },
+  "paper_eligible": true,
+  "dataset_repo": "google-deepmind/pg19",
+  "revision": "GCS per-object generation IDs in sources",
+  "source_list_sha256": "4f43395c9ce906e1a06cf0c70317d397e163e69deacc7f06cb4fa77bbccbeb8b",
+  "license": "Apache-2.0 (benchmark repository); retain source notices",
+  "exact_cross_split_document_duplicates": 0,
+  "source_training_articles_excluded_as_exact_heldout_duplicates": 0,
+  "full_source_train_heldout_exact_duplicate_articles": 0,
+  "after_filter_cross_split_exact_document_duplicates": 0
+}
